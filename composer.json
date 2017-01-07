@@ -1,0 +1,28 @@
+{
+  "name": "glaucus-pocus/glaucus-pocus",
+  "description": "Glaucus Pocus framework",
+  "type": "library",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Pandraghon",
+      "email": "pandraghon@outlook.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "psr/log": "^1.0",
+    "twig/twig": "^2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Glaucus\\": "src"
+    },
+    "files": [
+      "src/Core/functions.php"
+    ]
+  }
+}
