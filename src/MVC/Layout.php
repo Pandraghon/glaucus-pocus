@@ -18,8 +18,14 @@ class Layout {
         static::$twig->addFunction(new \Twig_SimpleFunction('Configure', function($method, $parameters) {
             return Configure::$method($parameters);
         }));
-        static::$twig->addFunction(new \Twig_SimpleFunction('css', function($file, $media) {
+        static::$twig->addFunction(new \Twig_SimpleFunction('css', function($file, $media = '') {
             return '<link href="' . CSS_PATH . $file . '" media="' . $media . '" rel="stylesheet" type="text/css" />';
+        }));
+        static::$twig->addFunction(new \Twig_SimpleFunction('js', function($file, $async = false, $defer = false) {
+            $s = '';
+            if($async) $s .= ' async="async"';
+            if($defer) $s .= ' defer="defer"';
+            return '<script src="' . JS_PATH . $file . '"' . $s . ' />';
         }));
     }
 
