@@ -25,7 +25,7 @@ class Layout {
             $s = '';
             if($async) $s .= ' async="async"';
             if($defer) $s .= ' defer="defer"';
-            return '<script src="' . JS_PATH . $file . '"' . $s . ' />';
+            return '<script src="' . JS_PATH . $file . '"' . $s . '></script>';
         }));
     }
 
